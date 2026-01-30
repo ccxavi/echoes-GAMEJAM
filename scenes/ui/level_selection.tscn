@@ -1,0 +1,90 @@
+[gd_scene load_steps=13 format=3 uid="uid://epqqhjr3w3dk"]
+
+[ext_resource type="Script" uid="uid://b7n5fpj4u6eyb" path="res://scripts/ui/level_selection/level_select.gd" id="1_r4y5g"]
+[ext_resource type="Script" uid="uid://n0pqhlkmq3uw" path="res://scripts/ui/level_selection/level_data.gd" id="2_48dmm"]
+[ext_resource type="PackedScene" uid="uid://cog4bc2ovp2w4" path="res://scenes/ui/level_button.tscn" id="2_hvilc"]
+[ext_resource type="Resource" uid="uid://5r2ymentoryk" path="res://scripts/ui/level_selection/level_1.tres" id="3_hvilc"]
+[ext_resource type="Resource" uid="uid://bp2g0qgl6xum8" path="res://scripts/ui/level_selection/level_2.tres" id="5_yssoo"]
+[ext_resource type="Resource" uid="uid://diqgjkj2keqry" path="res://scripts/ui/level_selection/level_3.tres" id="6_iwede"]
+[ext_resource type="Resource" uid="uid://clb38ulg31by8" path="res://scripts/ui/level_selection/level_4.tres" id="7_tjon8"]
+[ext_resource type="Resource" uid="uid://bvy041yvv52i0" path="res://scripts/ui/level_selection/level_5.tres" id="8_bxy7t"]
+[ext_resource type="Texture2D" uid="uid://da756wwadbm8i" path="res://assets/UI/level_previews/1.png" id="9_tjon8"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_iwede"]
+bg_color = Color(0, 0, 0, 0.39215687)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tjon8"]
+bg_color = Color(0, 0, 0, 0.78431374)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bxy7t"]
+bg_color = Color(0, 0, 0, 0.5882353)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[node name="LevelSelect" type="CanvasLayer"]
+script = ExtResource("1_r4y5g")
+level_button_scene = ExtResource("2_hvilc")
+levels = Array[ExtResource("2_48dmm")]([ExtResource("3_hvilc"), ExtResource("5_yssoo"), ExtResource("6_iwede"), ExtResource("7_tjon8"), ExtResource("8_bxy7t")])
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.5882353, 0.5882353, 0.5882353, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_tjon8")
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="BackButton" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 30.0
+offset_right = 114.0
+offset_bottom = 72.0
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_iwede")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tjon8")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bxy7t")
+text = "< Back"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+z_index = 4096
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -323.0
+offset_top = -232.0
+offset_right = 323.0
+offset_bottom = 232.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+columns = 3

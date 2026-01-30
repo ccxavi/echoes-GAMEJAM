@@ -1,0 +1,19 @@
+~ start
+You: This must be one of their outposts...
+Enemy: [shake rate=20 level=10]INTRUDER SPOTTED![/shake]
+You: The first battle of many...
+=> END
+
+~ finish
+You see beads with a mysterious aura on the ground.
+You: What is this...
+- Pick up the beads.
+You: [shake rate=20 level=10]W-what...[/shake]
+[wave amp=25 freq=5]You have obtained 'ECHO OF THE MONK'![/wave]
+Monk: [wave amp=25 freq=5]You have chosen the path less taken, Hero of the new age. Onwards! Face more enemies! I shall heal you on your path![/wave]
+PRESS (2) TO USE THE ECHO OF THE MONK!
+PRESS (LEFT MOUSE BUTTON) TO HEAL USING ECHO OF THE MONK!
+You: ...Who was that?
+You: I better leave before more arrive...
+- Sail to the next island.
+=> END

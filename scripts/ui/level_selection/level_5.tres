@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=3 format=3 uid="uid://bvy041yvv52i0"]
+
+[ext_resource type="Script" uid="uid://n0pqhlkmq3uw" path="res://scripts/ui/level_selection/level_data.gd" id="1_pgdc0"]
+[ext_resource type="Texture2D" uid="uid://diweqeaavsf44" path="res://assets/UI/level_previews/5.png" id="2_acbdj"]
+
+[resource]
+script = ExtResource("1_pgdc0")
+level_id = 5
+level_name = "Stronghold"
+scene_path = "res://scenes/levels/stronghold.tscn"
+texture = ExtResource("2_acbdj")
+metadata/_custom_type_script = "uid://n0pqhlkmq3uw"

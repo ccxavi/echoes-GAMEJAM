@@ -1,0 +1,100 @@
+[gd_scene load_steps=19 format=3 uid="uid://dn0fviuxjiqgp"]
+
+[ext_resource type="Script" uid="uid://c31hciya3r48y" path="res://scripts/camera.gd" id="1_lnu2h"]
+[ext_resource type="Script" uid="uid://xv1nackckx0h" path="res://scripts/party_manager.gd" id="2_lbhrr"]
+[ext_resource type="Texture2D" uid="uid://g80hw0d41i8c" path="res://assets/effects/spark.png" id="3_dinhu"]
+[ext_resource type="PackedScene" uid="uid://b0h0b2cpm8gto" path="res://scenes/characters/warrior.tscn" id="4_iywne"]
+[ext_resource type="PackedScene" uid="uid://crptpm7brbr5u" path="res://scenes/characters/monk.tscn" id="5_p57ef"]
+[ext_resource type="PackedScene" uid="uid://d0buro6mkrfpt" path="res://scenes/characters/lancer.tscn" id="6_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://f8a0hr62euxq" path="res://scenes/characters/goblin.tscn" id="7_gee14"]
+[ext_resource type="PackedScene" uid="uid://cdimmxll0i1dh" path="res://scenes/enemies/warrior.tscn" id="9_dinhu"]
+[ext_resource type="PackedScene" uid="uid://dbvl1xbqu22qb" path="res://scenes/ui/pauseMenu.tscn" id="10_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://du6scg0nqprkx" path="res://scenes/ui/echoDeck.tscn" id="11_dinhu"]
+[ext_resource type="PackedScene" uid="uid://cawr06uafyh47" path="res://scenes/levels/island1.tscn" id="11_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://dr8df60xkxb82" path="res://scenes/enemies/tnt.tscn" id="11_kvuet"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dinhu"]
+atlas = ExtResource("3_dinhu")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvuet"]
+atlas = ExtResource("3_dinhu")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trtic"]
+atlas = ExtResource("3_dinhu")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ir15t"]
+atlas = ExtResource("3_dinhu")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ca42v"]
+atlas = ExtResource("3_dinhu")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ca42v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dinhu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvuet")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_trtic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ir15t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ca42v")
+}],
+"loop": false,
+"name": &"switch",
+"speed": 10.0
+}]
+
+[node name="Game" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(3, -7)
+rotation = -1.5707964
+script = ExtResource("1_lnu2h")
+
+[node name="party_manager" type="Node2D" parent="." node_paths=PackedStringArray("echo_deck_ui")]
+z_index = 5
+script = ExtResource("2_lbhrr")
+echo_deck_ui = NodePath("../echoDeck")
+
+[node name="switch_vfx" type="AnimatedSprite2D" parent="party_manager"]
+z_index = 100
+scale = Vector2(3, 3)
+sprite_frames = SubResource("SpriteFrames_ca42v")
+animation = &"switch"
+
+[node name="warrior" parent="party_manager" instance=ExtResource("4_iywne")]
+
+[node name="monk" parent="party_manager" instance=ExtResource("5_p57ef")]
+heal_amount = 30
+heal_cooldown_duration = 5.0
+
+[node name="laner" parent="party_manager" instance=ExtResource("6_u5sy4")]
+
+[node name="goblin" parent="party_manager" instance=ExtResource("7_gee14")]
+
+[node name="enemies" type="Node2D" parent="."]
+z_index = 5
+position = Vector2(1, 0)
+
+[node name="tnt" parent="enemies" instance=ExtResource("11_kvuet")]
+
+[node name="Enemy" parent="enemies" instance=ExtResource("9_dinhu")]
+
+[node name="Island1" parent="." instance=ExtResource("11_kvpfn")]
+
+[node name="pauseMenu" parent="." instance=ExtResource("10_kvpfn")]
+
+[node name="echoDeck" parent="." instance=ExtResource("11_dinhu")]

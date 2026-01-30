@@ -1,0 +1,19 @@
+~ start
+You: Another outpost...
+Enemy: [shake rate=20 level=10]INTRUDER!![/shake]
+You: I guess it's time to test this 'echo', whatever it is...
+=> END
+
+~ finish
+You see a mysterious lance on the ground.
+You: A lance?
+- Pick up the lance.
+[wave amp=25 freq=5]You have obtained 'ECHO OF THE LANCER'![/wave]
+You: It's another one!
+Lancer: [wave amp=25 freq=5]We echoes of past heroes guide you on this treacherous path, hero of the new age...[/wave]
+PRESS (3) TO USE THE ECHO OF THE LANCER!
+PRESS (LEFT MOUSE BUTTON) TO ATTACK USING THE ECHO OF THE LANCER!
+HOLD TO USE THE DASH ATTACK!
+You: More voices...
+- Sail to the next island.
+=> END

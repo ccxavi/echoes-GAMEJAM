@@ -1,0 +1,19 @@
+~ start
+You: It seems I'm getting closer. Their base is just an island away.
+Enemy: [shake rate=20 level=10]ATTACK!!! THE INTRUDER IS HERE![/shake]
+You: It seems they know I'm attacking their outposts... No matter...
+=> END
+
+~ finish
+You see a mysterious lit torch in a puddle, unextinguishable.
+You: This must be...
+- Pick up the torch.
+[wave amp=25 freq=5]You have obtained 'ECHO OF THE GOBLIN'![/wave]
+You: What are these things?
+Goblin: [wave amp=25 freq=5]Krrkrrkrkrkrk... Krkrk. Krr (Hero, to the north is the place you seek.)[/wave]
+PRESS (4) TO USE THE ECHO OF THE GOBLIN!
+PRESS (LEFT MOUSE BUTTON) TO BURN YOUR ENEMIES USING THE ECHO OF THE GOBLIN!
+You: That sounded like... a goblin?[wait=1] But I can understand it... Strange...
+You: I guess the next island to the north is the enemy stronghold... Let's do this.
+- Sail to the next island.
+=> END

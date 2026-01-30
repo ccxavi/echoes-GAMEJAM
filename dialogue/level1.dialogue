@@ -1,0 +1,17 @@
+~ start
+Soldier 1: The enemy is attacking!
+Soldier 2: Make a defensive line!
+You: [shake rate=20 level=10]Charge!!![/shake]
+PRESS (LEFT MOUSE BUTTON) TO ATTACK!
+PRESS (LEFT SHIFT) TO DASH!
+=> END
+
+~ finish
+You notice the destruction on the ground.
+You decide to sail to the enemy stronghold to finish them once and for all.
+You: [shake rate=20 level=10]...[/shake]
+- Walk to the nearby boat.
+Soldier 1: Hey, where are you going?!
+You: Don't worry... I'll be back.
+- Sail to the next island.
+=> END

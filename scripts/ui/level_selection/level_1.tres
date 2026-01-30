@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=3 format=3 uid="uid://5r2ymentoryk"]
+
+[ext_resource type="Script" uid="uid://n0pqhlkmq3uw" path="res://scripts/ui/level_selection/level_data.gd" id="1_ywqxg"]
+[ext_resource type="Texture2D" uid="uid://da756wwadbm8i" path="res://assets/UI/level_previews/1.png" id="2_lb0ib"]
+
+[resource]
+script = ExtResource("1_ywqxg")
+level_name = "Village"
+scene_path = "res://scenes/levels/village.tscn"
+texture = ExtResource("2_lb0ib")
+metadata/_custom_type_script = "uid://n0pqhlkmq3uw"

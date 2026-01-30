@@ -1,0 +1,56 @@
+[gd_scene load_steps=4 format=3 uid="uid://cog4bc2ovp2w4"]
+
+[ext_resource type="Script" uid="uid://dta76wg3o45wk" path="res://scripts/ui/level_selection/level_button.gd" id="1_d4lgq"]
+[ext_resource type="Texture2D" uid="uid://dmv52o1j2pm8j" path="res://assets/UI/Icons/Regular_10.png" id="2_0pgek"]
+[ext_resource type="FontFile" uid="uid://cv1b15ooyc2bc" path="res://assets/UI/fonts/PatrickHand-Regular.ttf" id="2_7ldk7"]
+
+[node name="LevelButton" type="Button"]
+custom_minimum_size = Vector2(200, 200)
+offset_right = 150.0
+offset_bottom = 150.0
+script = ExtResource("1_d4lgq")
+
+[node name="PreviewImage" type="TextureRect" parent="."]
+modulate = Color(0.78431374, 0.78431374, 0.78431374, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 6
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/margin_left = 15
+theme_override_constants/margin_top = 15
+theme_override_constants/margin_right = 15
+theme_override_constants/margin_bottom = 15
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="LevelNumber" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("2_7ldk7")
+theme_override_font_sizes/font_size = 48
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="LevelTitle" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "lorem ipsum"
+
+[node name="LockIcon" type="TextureRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0pgek")

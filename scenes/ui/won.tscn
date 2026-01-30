@@ -1,0 +1,119 @@
+[gd_scene load_steps=12 format=3 uid="uid://0txw3ckna4f4"]
+
+[ext_resource type="Texture2D" uid="uid://h8lgb1y1phux" path="res://assets/UI/Buttons/Button_Blue_3Slides_Pressed.png" id="1_2goe5"]
+[ext_resource type="Script" uid="uid://b30segxxdio3o" path="res://scripts/ui/won.gd" id="1_adlx4"]
+[ext_resource type="Texture2D" uid="uid://1swawdw2lfju" path="res://assets/UI/Buttons/Button_Blue_3Slides.png" id="2_0lqna"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_adlx4"]
+texture = ExtResource("1_2goe5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jsy1c"]
+content_margin_left = 20.0
+content_margin_top = 20.0
+content_margin_right = 20.0
+content_margin_bottom = 30.0
+texture = ExtResource("2_0lqna")
+region_rect = Rect2(8, 0, 177, 56.25)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jduas"]
+content_margin_top = 48.0
+content_margin_bottom = 68.0
+bg_color = Color(0, 0, 0, 0.5019608)
+corner_radius_top_left = 4
+
+[sub_resource type="Theme" id="Theme_w8jvd"]
+Button/font_sizes/font_size = 20
+Button/styles/hover = SubResource("StyleBoxTexture_adlx4")
+Button/styles/normal = SubResource("StyleBoxTexture_jsy1c")
+Label/font_sizes/font_size = 100
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_jduas")
+VBoxContainer/constants/separation = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lkl2y"]
+content_margin_left = 4.0
+content_margin_top = 8.0
+content_margin_right = 4.0
+content_margin_bottom = 8.0
+bg_color = Color(0, 0, 0, 0.39215687)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e62wi"]
+content_margin_left = 4.0
+content_margin_top = 8.0
+content_margin_right = 4.0
+content_margin_bottom = 8.0
+bg_color = Color(0, 0, 0, 0.39215687)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a3kqb"]
+content_margin_left = 4.0
+content_margin_top = 8.0
+content_margin_right = 4.0
+content_margin_bottom = 8.0
+bg_color = Color(0, 0, 0, 0.39215687)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ue8d3"]
+content_margin_left = 4.0
+content_margin_top = 8.0
+content_margin_right = 4.0
+content_margin_bottom = 8.0
+bg_color = Color(0, 0, 0, 0.39215687)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="won" type="CanvasLayer"]
+script = ExtResource("1_adlx4")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme = SubResource("Theme_w8jvd")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+offset_top = 1.0
+offset_right = 1152.0
+offset_bottom = 646.0
+
+[node name="MasterVBox" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="CenterContainer/MasterVBox"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 120
+text = "YOU WON!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer/MasterVBox"]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 0
+
+[node name="Quit" type="Button" parent="CenterContainer/MasterVBox/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_lkl2y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_e62wi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_a3kqb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ue8d3")
+text = "MAIN MENU"

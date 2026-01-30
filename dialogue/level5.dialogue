@@ -1,0 +1,20 @@
+~ start
+You: I’ve arrived.
+Enemy: [shake rate=20 level=10]INTRUDER SPOTTED![/shake] [shake rate=20 level=10]INTRUDER SPOTTED![/shake] [shake rate=20 level=10]HE'S HERE!!![/shake]
+You: [shake rate=20 level=10]The time has come! For my fallen comrades! For my friends! My family! They push me to face you! Even the echoes of past heroes have responded to my call for vengeance! Face me![/shake]
+=> END
+
+~ finish
+You: I’ve succeeded...
+You slump down on the ground, tired.
+The echoes of past heroes leave your body.
+Monk: [wave amp=25 freq=5]You have proven yourself worthy...[/wave]
+Lancer: [wave amp=25 freq=5]Your legend has only begun... And thus you must return...[/wave]
+Goblin: [wave amp=25 freq=5]krrk... krkrkkk... krkkk... krkk (Continue on this path, Hero of a new age...)[/wave]
+All Echoes: [shake rate=20 level=10]CARVE YOUR LEGEND AS WE CARVED OURS![/shake] [shake rate=20 level=10]THIS PATH IS NOT FOR THE WEAK, ONLY THE STRONG![/shake]
+All Echoes: [wave amp=25 freq=5]Meet us in the Hall of Heroes once you have accomplished your goal...[/wave]
+YOU HAVE BEEN HEALED.
+You: Thank you...
+You rise to your feet, returning to your home and never looking back.
+- THE END.
+=> END

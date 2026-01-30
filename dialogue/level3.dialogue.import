@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dopbib135dv61"
+path="res://.godot/imported/level3.dialogue-67f9b378f2f103330c3d5d794ef1604b.tres"
+
+[deps]
+
+source_file="res://dialogue/level3.dialogue"
+dest_files=["res://.godot/imported/level3.dialogue-67f9b378f2f103330c3d5d794ef1604b.tres"]
+
+[params]
+
+defaults=true
